@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xXx СЭДКЭТ :: спасибо за пресейв xXx</title>
+
+<!--
+  ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+     СЭДКЭТ :: presave card
+     HTML 4.01 Transitional + CSS2 + JavaScript 1.5
+     index.html / style.css / script.js
+  ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="init()">
+
+<div id="wrap">
+
+<marquee scrollamount="4" style="color:#ff1493; font:bold 12px Verdana, sans-serif; margin-bottom:8px;">
+  ~*~ СПАСИБО ЗА ПРЕСЕЙВ ~*~ &lt;3 ~*~ ты лучше всех ~*~ x_X ~*~ не грусти, слушай СЭДКЭТ ~*~ &lt;3 ~*~
+</marquee>
+
+<div class="win">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" class="titlebar">
+    <tr>
+      <td><img src="img/heart.gif" width="27" height="24" align="absmiddle" alt="&lt;3"> sadkat_presave.exe</td>
+      <td align="right" width="60">
+        <table cellpadding="0" cellspacing="2" border="0"><tr>
+          <td class="tbtn" onclick="sadAlert('свернуть грусть невозможно :(')">_</td>
+          <td class="tbtn" onclick="sadAlert('грусть и так на весь экран')">&#9633;</td>
+          <td class="tbtn" onclick="sadAlert('нельзя закрыть то, что внутри тебя x_X')">x</td>
+        </tr></table>
+      </td>
+    </tr>
+  </table>
+
+  <div class="menubar">
+    <u>Ф</u>айл &nbsp; <u>П</u>равка &nbsp; <u>В</u>ид &nbsp; <u>Г</u>русть &nbsp; <u>С</u>правка
+  </div>
+
+  <div class="screen">
+
+    <div id="loader">
+      <p class="cyan">Соединение через 56k модем...</p>
+      <div class="bar">
+        <table width="100%" cellpadding="0" cellspacing="1" border="0"><tr id="cells"></tr></table>
+      </div>
+      <p class="small" id="loadtxt">пииии-кшшшш-трррр...</p>
+    </div>
+
+    <div id="s1">
+      <span class="xxx">xXx</span>
+      <div class="logo">
+        <span class="a">С</span><span class="b">Э</span><span class="a">Д</span><span class="b">К</span><span class="a">Э</span><span class="b">Т</span>
+      </div>
+      <span class="xxx">xXx</span>
+
+      <p><img src="img/sadcat.gif" width="104" height="136" alt="грустный кот"></p>
+
+      <h1>благодарит тебя<br>за <span>пресейв</span></h1>
+
+      <p class="txt">
+        Ты только что сделал(а) одного <span class="pink">ГРУСТНОГО КОТА</span>
+        чуточку счастливее <span class="cyan">:'( &rarr; :)</span><br>
+        Твой пресейв помог треку <span class="pink" id="trk1"></span> пробиться
+        сквозь тьму плейлистов и дойти до тех, кому он <span class="lime">ОЧЕНЬ НУЖЕН</span>.
+        Свою <span class="pink">НАГРАДУ</span> забирай на <span class="blink">СЛЕДУЮЩЕЙ СТРАНИЦЕ</span>.
+      </p>
+
+      <a href="#" class="btn" onclick="go('s2'); return false;">&lt;3 ЗАБРАТЬ НАГРАДУ &lt;3</a>
+    </div>
+
+    <div id="s2" style="display:none">
+      <h1>подарок от <span>СЭДКЭТ</span></h1>
+      <p class="txt">
+        <span class="pink">ЭЙ, ТЫ!</span> Да-да, ты, в чёрной толстовке.<br>
+        Выбери площадку, на которой ты обычно <span class="cyan">СМОТРИШЬ ВИДЕО</span>:
+      </p>
+
+      <table width="100%" cellpadding="6" cellspacing="0" border="0">
+        <tr>
+          <td width="50%">
+            <a href="#" class="plat" onclick="pick('vk'); return false;">
+              VK ВИДЕО<br><span class="small">смотрю тут</span>
+            </a>
+          </td>
+          <td width="50%">
+            <a href="#" class="plat" onclick="pick('yt'); return false;">
+              YOUTUBE<br><span class="small">смотрю тут</span>
+            </a>
+          </td>
+        </tr>
+      </table>
+
+      <div class="strip"></div>
+      <a href="#" onclick="go('s1'); return false;" class="small">&larr; назад к благодарности</a>
+    </div>
+
+    <div id="s3" style="display:none">
+      <h1><span id="trk2"></span><br>ждёт тебя</h1>
+      <p class="txt">
+        Вот твоё <span class="pink" id="bonusv"></span>.<br>
+        Смотреть только в наушниках и с выключенным светом.
+      </p>
+
+      <a href="#" id="watch" class="btn" target="_blank">&#9654; СМОТРЕТЬ</a>
+
+      <div class="bonusbox">
+        <p class="txt" style="margin-top:0">
+          <img src="img/sparkle.gif" width="15" height="15" alt="*">
+          В благодарность <span class="pink" id="partner"></span> дарит тебе промокод на
+          <span class="lime" id="discount"></span> на билет на <span class="cyan" id="event"></span>
+          <img src="img/sparkle.gif" width="15" height="15" alt="*">
+        </p>
+        <input type="text" id="promo" class="promo" readonly onclick="this.select()">
+        <input type="button" class="btn" value="КОПИРОВАТЬ" onclick="copyCode()" style="font-size:12px; padding:6px 10px;">
+        <p id="copymsg" class="small">&nbsp;</p>
+
+        <a href="#" id="tickets" class="btn" target="_blank">&#9835; БИЛЕТЫ &#9835;</a>
+      </div>
+
+      <a href="#" onclick="go('s2'); return false;" class="small">&larr; выбрать другую площадку</a>
+    </div>
+
+  </div>
+
+  <div class="amp">
+    <marquee scrollamount="2" id="nowplaying">*** 1. СЭДКЭТ - ... (03:33) ***</marquee>
+  </div>
+
+  <div class="statusbar">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td id="status">Готово</td>
+      <td align="right">Настроение: <b>грустный кот</b> =(</td>
+    </tr></table>
+  </div>
+</div>
+
+<div id="footer">
+  <p>ты заходил(а) сюда <span class="counter" id="counter">000001</span> раз(а)</p>
+  <img src="img/btn_sadkat.gif" width="88" height="31" alt="SADKAT ROXX">
+  <img src="img/btn_emo.gif" width="88" height="31" alt="emo kids unite">
+  <img src="img/btn_nofear.gif" width="88" height="31" alt="no flash">
+  <img src="img/btn_800.gif" width="88" height="31" alt="best viewed 800x600">
+  <p>&copy; 2004&ndash;2026 СЭДКЭТ. Сделано в Блокноте.<br>
+  Оптимизировано под Internet Explorer 6.0 и разрешение 800x600.</p>
+</div>
+
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
